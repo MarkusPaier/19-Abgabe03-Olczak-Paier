@@ -76,4 +76,13 @@ public class StringStackTest {
             assertNull(e.getMessage());
         }
     }
+    // check capacity of stack
+    @Test //(expected = IllegalArgumentException.class)
+    public void testCapacityOfStack() throws Exception {
+        try {
+            s = new StringStack(0);
+        } catch (java.lang.IllegalArgumentException e) {
+            assertEquals("size <= 0", e.getMessage());
+        }
+    }
 }
