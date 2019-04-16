@@ -62,4 +62,18 @@ public class StringStackTest {
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
 
+    // check size of stack
+    @Test
+    public void testSizeOfStack() throws Exception {
+        try {
+            s.push("1");
+            s.push("2");
+            s.push("3");
+            s.push("4");
+            s.push("5");
+            s.push("6");
+        } catch (java.lang.IllegalStateException e) {
+            assertNull(e.getMessage());
+        }
+    }
 }
