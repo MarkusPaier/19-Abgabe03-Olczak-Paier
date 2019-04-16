@@ -1,0 +1,7 @@
+/.idea/
+/*.class
+/target/
+
+# OS generated files #
+######################
+/.DS_Store
