@@ -76,13 +76,24 @@ public class StringStackTest {
             assertNull(e.getMessage());
         }
     }
+
     // check capacity of stack
-    @Test //(expected = IllegalArgumentException.class)
+    @Test
     public void testCapacityOfStack() throws Exception {
         try {
             s = new StringStack(0);
         } catch (java.lang.IllegalArgumentException e) {
             assertEquals("size <= 0", e.getMessage());
+        }
+    }
+
+    // check pop element count
+    @Test
+    public void testPopElementCount() throws Exception {
+        try {
+            s.pop();
+        } catch (java.lang.IllegalStateException e) {
+            assertNull(e.getMessage());
         }
     }
 }
