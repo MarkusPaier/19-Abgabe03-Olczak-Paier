@@ -49,6 +49,13 @@ public class StringStackTest {
      */
     @Test
     public void testPushPop() throws Exception {
+        s.push("1");
+        s.push("5");
+        s.push("7");
+        assertEquals("7", s.pop());
+        assertEquals("5", s.pop());
+        assertEquals("1", s.pop());
+        assertTrue(s.isEmpty());
     }
 
     /**
